@@ -1,0 +1,34 @@
+version: 1.0.{build}-{branch}
+
+environment:
+  # postgres
+  PGHOST: tcp://localhost:5432
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: Password12!
+  POSTGRES_DB: circuitverse_test
+  PGUSER: postgres
+  PGPASSWORD: Password12!
+
+
+services:
+  - postgresql95
+
+install:
+  - SET PATH=C:\Ruby253\bin;%PATH%
+  - SET PATH=C:\Program Files\PostgreSQL\9.5\bin
+  - bundle config --local path vendor/bundle
+  - bundle install --with postgresql
+
+cache:
+  - vendor/bundle
+
+build: off
+
+before_test:
+  - ruby -v
+  - gem -v
+  - bundle -v
+
+test_script:
+  - cmd: copy config/database.example.yml config/database.yml
+  - cmd: rails db:schema:load
