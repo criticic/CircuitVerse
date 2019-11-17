@@ -14,7 +14,7 @@ services:
   - postgresql95
 
 install:
-  - cinst install ca-certificates
+  - yum install ca-certificates
   - cmd: SET PATH=C:\Ruby253\bin;%PATH%
   - cmd: SET PATH=C:\Program Files\PostgreSQL\9.5\bin;%PATH%
   - bundle config --local path vendor/bundle
