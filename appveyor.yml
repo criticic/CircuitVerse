@@ -16,7 +16,6 @@ services:
 install:
   - cmd: SET PATH=C:\Ruby253\bin;%PATH%
   - cmd: SET PATH=C:\Program Files\PostgreSQL\9.5\bin;%PATH%
-  - gem install bundler
   - bundle config --local path vendor/bundle
   - bundle install --with postgresql
 
