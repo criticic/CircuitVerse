@@ -8,7 +8,6 @@ environment:
   PGHOST: 127.0.0.1
   PGUSER: postgres
   POSTGRES_DB: circuitverse_test
-  PGUSER: postgres
 
 services:
   - postgresql95
