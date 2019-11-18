@@ -24,7 +24,7 @@ before_test:
   - gem -v
   - bundle -v
 
-test-script:
+test_script:
   - ruby -v
   - gem -v
   - bundle -v
