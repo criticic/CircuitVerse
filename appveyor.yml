@@ -8,7 +8,6 @@ environment:
   PGHOST: 127.0.0.1
   PGUSER: postgres
   POSTGRES_DB: circuitverse_test
-  PGPASSWORD: postgres
 
 services:
   - postgresql95
@@ -24,6 +23,7 @@ before_test:
   - ruby -v
   - gem -v
   - bundle -v
+  - SET PGPASSWORD=Password12!
   - copy config\database.example.yml config\database.yml
   - ruby bin\rails db:schema:load
 
