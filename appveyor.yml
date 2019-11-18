@@ -8,7 +8,7 @@ environment:
   PGHOST: 127.0.0.1
   PGUSER: postgres
   POSTGRES_DB: circuitverse_test
-  POSTGRES_PASSWORD: Password12!
+  PGPASSWORD: Password12!
 services:
   - postgresql95
 
