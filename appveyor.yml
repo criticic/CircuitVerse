@@ -24,7 +24,7 @@ before_test:
   - gem -v
   - bundle -v
   - copy config\database.example.yml config\database.yml
-  - ruby bin\rails db:schema:load
+  - ruby bin\rails db:setup
 
 
 test_script:
