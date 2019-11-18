@@ -23,7 +23,7 @@ before_test:
   - ruby -v
   - gem -v
   - bundle -v
-  - copy config/database.example.yml config/database.yml
+  - copy C:/projects/CircuitVerse/config/database.example.yml C:/projects/CircuitVerse/config/database.yml
 
 
 test_script:
