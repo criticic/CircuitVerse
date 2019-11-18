@@ -28,6 +28,7 @@ before_test:
 
 
 test_script:
-  - ruby -v
-  - gem -v
-  - bundle -v
+  - bundle exec rspec --profile 10 \
+      --format RspecJunitFormatter \
+      --out test_results\rspec.xml \
+      --format progress 
