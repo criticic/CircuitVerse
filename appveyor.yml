@@ -28,4 +28,4 @@ before_test:
 
 
 test_script:
-  - COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN bundle exec coveralls push
+  - bundle exec coveralls push
