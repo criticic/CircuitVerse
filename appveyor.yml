@@ -26,4 +26,4 @@ before_test:
 
 
 test_script:
-  - bundle exec rspec 
+  - bundle exec rspec --format RspecJunitFormatter --out test_results/rspec.xml --format progress
